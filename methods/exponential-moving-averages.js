@@ -68,7 +68,7 @@ TradingMethod.prototype.start = function() {
     this.getHistoricalCandles();
   } else {
     this.getHistoricalCandles();
-    setInterval(this.getNewCandle, util.minToMs( settings.interval ) );
+    setInterval(this.getNewCandle, util.secToMs( settings.interval ) );
   }
 }
 

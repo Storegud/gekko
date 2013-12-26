@@ -37,11 +37,14 @@ var util = {
   minToMs: function(min) {
     return min * 60 * 1000;
   },
+  secToMs: function(sec) {
+	    return sec * 1000;
+	  },  
   toMicro: function(moment) {
     return moment.format('X') * 1000 * 1000;
   },
   intervalsAgo: function(amount) {
-    return moment().subtract('minutes', config.EMA.interval * amount);
+    return moment().subtract('seconds', config.EMA.interval * amount);
   },
   average: function(list) {
     var total = _.reduce(list, function(m, n) { return m + n }, 0);

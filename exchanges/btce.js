@@ -8,7 +8,7 @@ var log = require('../log')
 var Trader = function(config) {
   this.key = config.key;
   this.secret = config.secret;
-  this.pair = 'btc_' + config.currency.toLowerCase();
+  this.pair = config.asset.toLowerCase() +'_' + config.currency.toLowerCase();
   this.name = 'BTC-E';
 
   _.bindAll(this);
